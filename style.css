@@ -1,0 +1,696 @@
+body{
+  
+  background-color: #ecedf0 !important;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+p,h1,h2,h3,h4,h5,h6,ul,li{
+  list-style: none;
+    margin: 0px !important;
+    padding: 0px;
+}
+ul{
+  padding-left: 0% !important;
+}
+
+ /* search box css  */
+
+ .search_box_container_div{
+   position: relative;
+ }
+.search_bar_main_div{
+ text-align: center;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ background-color: antiquewhite;
+}
+.search_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.search_inp{
+    width: 40%;
+    text-align: start;
+    color: rgb(151, 150, 150);
+    padding: 8px 10px;
+    background: #f5f5f5;
+}
+.search_btn{
+    padding:7px 20px;
+    outline: none;
+    border: none;
+    background-color: #1d67bd;
+    color: #f5f5f5 !important;
+}
+.search_inp:hover{
+  cursor: pointer;
+}
+/* search div show onclick  */
+
+.inputs_searc_abs_div{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.search_aboslute_div{
+    background-color: rgba(0,0,0,.85);
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    padding-bottom: 65px;
+}
+.search_abs_sub_div{
+  position: relative;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: flex-end;
+}
+.search_abs_sub_div>div{
+
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    height: 40px;
+    padding: 0px 5px;
+    width: 40px;
+    margin-right: 20px;
+}
+.crox_btn{
+    font-size: 2.5em;
+    width: fit-content;
+    margin-top: -14px !important;
+    position: absolute;
+    right: 7px;
+    z-index: 999;
+
+}
+.search_abs_sub_div>div:hover{
+  cursor: pointer;
+}
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 7px 10px;
+    font-size: 16px;
+  }
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 300px;
+    /* margin: 0px 10px; */
+    margin-right: 20px;
+    outline: none;
+  }
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+
+  /* select dropdowns  */
+
+  .custom-select-wrapper,.custom-select-wrapper2 {
+    position: relative;
+    user-select: none;
+    width: 150px;
+    background: #f5f5f5;
+    /* margin: 0px 20px; */
+    margin-left: 10px;
+ 
+}
+.custom-select,.custom-select2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-width: 0 2px 0 2px;
+    /* border-style: solid; */
+    /* border-color: #394a6d; */
+}
+.custom-select__trigger,.custom-select__trigger2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #3b3b3b;
+    height: 40px;
+    line-height: 60px;
+    background: #f5f5f5;
+
+    cursor: pointer;
+    border-width: 2px 0 2px 0;
+    /* border-style: solid; */
+    /* border-color: #394a6d; */
+}
+.custom-options,.custom-options2 {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* border: 2px solid #394a6d; */
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0px 2px 5px gainsboro;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.custom-select.open .custom-options,.custom-select2.open .custom-options2 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option,.custom-option2 {
+    position: relative;
+    display: block;
+    padding: 0 22px 0 22px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #3b3b3b;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+.custom-option.selected,.custom-option2.selected2 {
+    color: #ffffff;
+    background-color: #305c91;
+}
+
+.arrow {
+  position: relative;
+  height: 10px;
+  width: 10px;
+}
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.13rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrow::before {
+  left: -3px;
+  transform: rotate(45deg);
+  background-color: #394a6d;
+}
+.arrow::after {
+  left: 3px;
+  transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+.open .arrow::before {
+  left: -3px;
+  transform: rotate(-45deg);
+}
+.open .arrow::after {
+  left: 3px;
+  transform: rotate(45deg);
+}
+
+.left_btn{
+  margin-left: 10px;
+}
+.advnce_option_div{
+  margin-top: 25px !important;
+  color: white;
+}
+.advnce_option_div>p{
+  margin-top: 5px !important;
+}
+.advnce_option_div>p:hover{
+  cursor: pointer;
+}
+
+/* slider css  */
+
+.swiper_slider_main_div{
+  position: relative;
+  height: max-content;
+  margin-top: 50px;
+  width: 100%;
+  background-color: white;
+  margin: 50px auto;
+  /* border: 2px solid red; */
+}
+.swiper-container {
+  width: 80%;
+  height: max-content;
+  /* margin: 10px !important; */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  padding: 20px 20px;
+  /* margin: 0px 2px; */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+  left: 0px !important;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+  right: 0px !important; 
+}
+.swiper-button-next, .swiper-button-prev{
+  width: 25px !important;
+  color: gray !important;
+}
+.card_slide{
+  border: 1px solid gainsboro;
+  padding: 10px 20px;
+  margin: 0px 3px;
+  height: 20vh;
+}
+.card_slide> p{
+  margin-top: 10px !important;
+  font-size: .9rem ;
+}
+
+/* modal css  */
+.modal-dialog{
+  max-width: 730px !important;
+}
+.modal_main_div_container{
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+.input_div{
+  margin-top: 10px;
+}
+.input_div>select,.input_div>input,.input_div>button{
+  background-color: #f5f5f5;
+  border: 1px solid gainsboro;
+  padding: 5px 10px;
+   width: 335px;
+   outline: none;
+   margin-top: 5px;
+}
+.input_div>button{
+  background-color: #1d67bd;
+  color: white;
+  margin-top: 25px;
+
+}
+.input_div>select{
+  padding: 5.5px 10px;
+}
+.input_div>p{
+  font-size: .9rem;
+  margin-top: 5px !important;
+}
+/* .input_div>input{
+  background-color: #f5f5f5;
+  border: 1px solid gainsboro;
+  padding: 6px;
+   width: 320px;
+   outline: none;
+} */
+
+/* list and uni logos section  */
+
+.lists_and_uni_logos_main_div{
+  display: flex;
+ justify-content: center;
+}
+.list_div_section{
+  width: 600px;
+  padding: 10px 20px;
+  /* max-height: 45vh; */
+  height: max-content;
+  background-color: white;
+  margin: 0px 10px;
+}
+.lists_main_div{
+  display: flex;
+  justify-content: space-between;
+}
+.lists_sec li{
+  margin-top: 10px !important;
+}
+.uni_logos_section{
+  width: 515px;
+  padding: 10px;
+  min-height: 45vh;
+  background-color: white;
+  margin: 0px 10px;
+
+
+}
+.uni_logo_head_div{
+  display: flex;
+  justify-content: space-between;
+}
+.uni_logo{
+  margin: 5px;
+  border: 1px solid gainsboro;
+  padding: 5px;
+  width: 150px;
+}
+.uni_logo_all{
+  margin-right: 10px;
+}
+
+/* area vice uni tabs  */
+
+.area_unis_main_div{
+  width: 1135px;
+  background-color: white;
+  margin: 30px auto;
+  padding: 10px;
+  min-height: 50vh;
+}
+.areas_uni_head{
+  display: flex;
+  justify-content: space-between;
+}
+.uni_list_areas>li{
+  margin-top: 8px !important; 
+  display: flex;
+}
+.uni_list_areas{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 6;
+  /* -webkit-column-count: 6; */
+  -moz-column-count: 6;
+  -ms-column-count: 6;
+  column-gap: 20px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  -ms-column-gap: 20px;
+}
+.more_icon,.mob_uni_list{
+  display: none;
+}
+/* practice paper section  */
+
+.unis_practice_paper_main_div{
+  display: flex;
+  justify-content: center;
+}
+.practice_paper_sec{
+  width: 558px !important;
+}
+.practice_div{
+  text-align: center;
+  /* border: 2px solid red; */
+  width: 400px;
+  margin: 0px auto;
+  position: relative;
+}
+.practice_div>p{
+  margin-top: 20px !important;
+}
+.practice_div>button{
+  margin-top: 90px ;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  background-color: #1d67bd;
+  color: white;
+  
+}
+
+/* features section  */
+
+.swiper-container2{
+  width: 100%;
+  
+}
+.next_btn_div{
+  position: relative;
+}
+.swiper-container2 {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.featrues__div{
+  width: 1140px;
+  margin: 30px auto;
+}
+.feature_next{
+  /* width: 10px !important; */
+  /* height: 10px !important; */
+}
+.feature_prev{
+  /* width: 140px !important; */
+}
+.feature_next:after, .feature_prev:after{
+  font-size: 16px !important;
+
+}
+.feature_prev:after{
+  margin-left: 120px;
+}
+.featrues_all{
+  margin-right: 50px ;
+}
+.feature_card{
+  width: 200px;
+  background-color: gainsboro;
+  padding: 10px;
+  text-align: center;
+  height: 30vh;
+}
+.feature_slider{
+  width: 310px !important;
+  padding: 11px 10px !important;
+  /* margin: 0px 7px; */
+}
+.feature_card>p{
+  margin-top: 20px !important;
+}
+
+/* footer */
+.footerb {
+  background-image: url(https://hopeful-leavitt-e98e69.netlify.app/assets/images/footer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0px;
+}
+.list-unstyled>li>p{
+  margin-top: 5px !important;
+}
+
+@media screen and (max-width: 1155px){
+  .area_unis_main_div,.featrues__div{
+    width: 900px;
+  }
+}
+@media screen and (max-width: 920px){
+  .area_unis_main_div,.featrues__div{
+    width: 100%;
+  }
+  .swiper-container{
+    width: 98%;
+  }
+  .lists_and_uni_logos_main_div,.unis_practice_paper_main_div{
+    flex-wrap: wrap;
+  }
+  .uni_logos_section,.list_div_section{
+    margin-top: 20px ;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 745px){
+  .inputs_searc_abs_div{
+    flex-wrap: wrap;
+  }
+  .modal-dialog{
+    width: 85% !important;
+  }
+  .input_div>select, .input_div>input, .input_div>button{
+    width: 250px;
+  }
+  .card_slide{
+    width: 120px;
+  }
+}
+@media screen and (max-width: 635px){
+  .uni_list_areas{
+    column-count: 4;
+  }
+  .lists_main_div{
+    /* column-count: 2; */
+    /* column-gap: 5px; */
+    font-size: .9rem;
+    flex-wrap: wrap;
+  }
+  .search_div,.search_abs_sub_div{
+    display: none;
+  }
+  .search_aboslute_div{
+    display: block;
+    background-color: antiquewhite;
+    position: initial;
+    /* background-color: ; */
+  }
+  .inputs_searc_abs_div{
+    margin-top: 0px;
+  }
+ .custom-select-wrapper, .custom-select-wrapper2{
+    width: 95% !important;
+    margin: 5px 0px ;
+  }
+  .country_search_inp{
+    width: 95% !important;
+    margin-right: 0px !important;
+  }
+  .autocomplete{
+    padding: 0px !important;
+    width: 100% !important;
+  }
+  .search_btn{
+    width: 95% !important;
+  }
+  .advnce_option_div{
+    width: 100%;
+    margin-top: 10px !important;
+  }
+  .advnce_option_div>p{
+    color: black;
+  }
+  .nav-link{
+    padding: .5rem .3rem !important;
+    font-size: .9rem;
+  }
+  .uni_list_areas>li{
+    margin-top: 2px !important;
+  }
+  .uni_logo{
+    width: 40%;
+  }
+  .area_unis_main_div{
+    height: max-content;
+  }
+  .modal_main_div_container{
+    flex-wrap: wrap;
+  }
+  .input_div>select, .input_div>input, .input_div>button{
+    width: 100%;
+  }
+  .input_div{
+    width: 100%;
+  }
+  .input_div>button{
+    margin-top: 10px;
+  }
+  .modals_input_main_div{
+    width: 100%;
+  }
+  .modal-dialog{
+    width: 95% !important;
+  }
+}
+@media screen and (max-width: 480px){
+  .uni_list_areas{
+    column-count: 2;
+  }
+  .area_unis_main_div{
+    height: max-content !important;
+  }
+  .practice_paper_sec{
+    width: 95% !important;
+  }
+  .practice_div{
+    width: 80% !important;
+  }
+  .feature_car{
+    margin: 0px auto;
+    width: 100% !important;
+  }
+  .feature_slider{
+    width: 100% !important;
+  }
+  .more_icon{
+    display: block;
+    position: relative;
+    right: 20px;
+  }
+  .more_icon:hover>.mob_uni_list{
+    display: block;
+    position: absolute;
+    right: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 5px gainsboro;
+    padding: 10px;
+    z-index: 111;
+  }
+  .mob_uni_list>p{
+    margin-top: 5px !important;
+  }
+  .desktop_tab{
+    display: none;
+  }
+}

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- navbar  -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img class="navbar-brand mb-0 h1" src="./logo/logo.png" alt="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-dark p-4">
+            <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Counseling</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">ScholarShip</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Sign in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">login</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- search bar  -->
+    <div class="search_box_container_div">
+        <div class="search_bar_container">
+            <div class="search_bar_main_div">
+                <h1>Search job</h1>
+                <div class="search_div">
+                    <div id="search_inp" class="search_inp" onclick="showInputDiv()">
+                        <p>Job title , skill or company</p>
+                    </div>
+                    <a href="./search.html">
+                        <button class="search_btn">Search</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="search_aboslute_div" class="search_aboslute_div">
+            <div class="search_abs_sub_div">
+                <div onclick="hideInputDiv()">
+                    <p id='cros_btn' class="crox_btn">&times;</p>
+                </div>
+            </div>
+            <div class="inputs_searc_abs_div">
+                <div class="autocomplete" style="width:300px;">
+                    <input id="myInput" type="text" class="country_search_inp" name="myCountry" placeholder="Country">
+                </div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Tesla</span>
+                            <div class="arrow"></div>
+                            <!-- <i class="bi bi-code"></i> -->
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected" data-value="tesla">Tesla</span>
+                            <span class="custom-option" data-value="volvo">Volvo</span>
+                            <span class="custom-option" data-value="mercedes">Mercedes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-select-wrapper2">
+                    <div class="custom-select2">
+                        <div class="custom-select__trigger2"><span>Tesla</span>
+                            <div class="arrow"></div>
+                            <!-- <i class="bi bi-code"></i> -->
+                        </div>
+                        <div class="custom-options2">
+                            <span class="custom-option2 selected2" data-value="tesla">Tesla</span>
+                            <span class="custom-option2" data-value="volvo">Volvo</span>
+                            <span class="custom-option2" data-value="mercedes">Mercedes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advnce_option_div">
+                    <a href="./search.html">
+                        <button class="search_btn">Search</button>
+                    </a>
+                    <p class="advnce_optn" data-bs-toggle="modal" data-bs-target="#exampleModal">Advance option</p>
+                </div>
+                <!-- modal  -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title " id="exampleModalLabel">Advance Search</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body modal_main_div_container">
+                                <div class="modals_input_main_div">
+                                    <div class="input_div">
+                                        <p>Name</p>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="input_div">
+                                        <p>Perchentage</p>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="input_div">
+                                        <p>address</p>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="input_div">
+                                        <p>University</p>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="modals_input_main_div">
+                                    <div class="input_div">
+                                        <p>City</p>
+                                        <select name="" id="">
+                                            <option value="">City</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_div">
+                                        <p>State</p>
+                                        <select name="" id="">
+                                            <option value="">City</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_div">
+                                        <p>City</p>
+                                        <select name="" id="">
+                                            <option value="">City</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_div">
+                                        <p></p>
+                                        <button type="button" class="btn btn-primary"
+                                            data-bs-dismiss="modal">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper_slider_main_div">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card_slide">
+                            <div>
+                                <img src="./logo//logo.png" alt="">
+                            </div>
+                            <p>This Caption</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card_slide">
+                            <div>
+                                <img src="./logo//logo.png" alt="">
+                            </div>
+                            <p>This Caption</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card_slide">
+                            <div>
+                                <img src="./logo//logo.png" alt="">
+                            </div>
+                            <p>This Caption</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card_slide">
+                            <div>
+                                <img src="./logo//logo.png" alt="">
+                            </div>
+                            <p>This Caption</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card_slide">
+                            <div>
+                                <img src="./logo//logo.png" alt="">
+                            </div>
+                            <p>This Caption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+
+        <!-- uni logos section and list  -->
+
+        <div class="lists_and_uni_logos_main_div">
+            <div class="list_div_section">
+                <h3>Browse Jobs in Pakistan</h3>
+                <hr>
+                <div class="lists_main_div">
+                    <div class="list1_div">
+                        <ul class="lists_sec">
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                        </ul>
+                    </div>
+                    <div class="list1_div">
+                        <ul class="lists_sec">
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                        </ul>
+                    </div>
+                    <div class="list1_div">
+                        <ul class="lists_sec">
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                            <li>information technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="uni_logos_section">
+                <div class="uni_logo_head_div">
+                    <h4>Heading</h4>
+                    <div class="next_btn_div">
+                        <a href="" class="uni_logo_all">view all</a>
+                        <i class="fa fa-chevron-left" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-chevron-right" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="uni_logos_img">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                                <img src="./logo/logo.png" class=" uni_logo" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./logo/logo.png" class="uni_logo " alt="...">
+                                <img src="./logo/logo.png" class="uni_logo " alt="...">
+                                <img src="./logo/logo.png" class="uni_logo " alt="...">
+                                <img src="./logo/logo.png" class="uni_logo " alt="...">
+                                <img src="./logo/logo.png" class="uni_logo " alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                                <img src="./logo/logo.png" class="uni_logo" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- area vice uni tabs  -->
+        <div class="area_unis_main_div">
+            <div class="areas_uni_head">
+                <h3>Heading</h3>
+                <div class="more_icon">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    <!-- mob view uni list tabs  -->
+                    <nav class="mob_uni_list">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="true">Karachi</button>
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                aria-selected="false">Lahore</button>
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                aria-selected="false">Islamabad</button>
+                            <button class="nav-link" id="nav-city-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-city"
+                                aria-selected="false">abbotaabad</button>
+                        </div>
+                    </nav>
+                </div>
+                <!-- desktop view uni list tabs  -->
+
+                <nav class="desktop_tab">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">Karachi</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Lahore</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">Islamabad</button>
+                        <button class="nav-link" id="nav-city-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-city" aria-selected="false">abbotaabad</button>
+                    </div>
+                </nav>
+            </div>
+            <hr>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <ul class="uni_list_areas">
+                        <li>university 1</li>
+                        <li>university 2</li>
+                        <li>university 3</li>
+                        <li>university 4</li>
+                        <li>university 5</li>
+                        <li>university 6</li>
+                        <li>university 7</li>
+                        <li>university 8</li>
+                        <li>university 9</li>
+                        <li>university 10</li>
+                        <li>university 11</li>
+                        <li>university 12</li>
+                        <li>university 13</li>
+                        <li>university 14</li>
+                        <li>university 15</li>
+                        <li>university 16</li>
+                        <li>university 17</li>
+                        <li>university 18</li>
+                        <li>university 19</li>
+                        <li>university 20</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <ul class="uni_list_areas">
+                        <li>university 21</li>
+                        <li>university 22</li>
+                        <li>university 23</li>
+                        <li>university 24</li>
+                        <li>university 25</li>
+                        <li>university 26</li>
+                        <li>university 27</li>
+                        <li>university 28</li>
+                        <li>university 29</li>
+                        <li>university 30</li>
+                        <li>university 31</li>
+                        <li>university 32</li>
+                        <li>university 33</li>
+                        <li>university 34</li>
+                        <li>university 35</li>
+                        <li>university 36</li>
+                        <li>university 37</li>
+                        <li>university 38</li>
+                        <li>university 39</li>
+                        <li>university 40</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <ul class="uni_list_areas">
+                        <li>university 41</li>
+                        <li>university 42</li>
+                        <li>university 43</li>
+                        <li>university 44</li>
+                        <li>university 45</li>
+                        <li>university 46</li>
+                        <li>university 47</li>
+                        <li>university 48</li>
+                        <li>university 49</li>
+                        <li>university 50</li>
+                        <li>university 51</li>
+                        <li>university 52</li>
+                        <li>university 53</li>
+                        <li>university 54</li>
+                        <li>university 55</li>
+                        <li>university 56</li>
+                        <li>university 57</li>
+                        <li>university 58</li>
+                        <li>university 59</li>
+                        <li>university 60</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-city" role="tabpanel" aria-labelledby="nav-city-tab">
+                    <ul class="uni_list_areas">
+                        <li>university 61</li>
+                        <li>university 62</li>
+                        <li>university 63</li>
+                        <li>university 64</li>
+                        <li>university 65</li>
+                        <li>university 66</li>
+                        <li>university 67</li>
+                        <li>university 68</li>
+                        <li>university 69</li>
+                        <li>university 70</li>
+                        <li>university 71</li>
+                        <li>university 72</li>
+                        <li>university 73</li>
+                        <li>university 74</li>
+                        <li>university 75</li>
+                        <li>university 76</li>
+                        <li>university 77</li>
+                        <li>university 78</li>
+                        <li>university 79</li>
+                        <li>university 80</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- uni exams practice paper section  -->
+
+        <div class="unis_practice_paper_main_div">
+            <div class="uni_logos_section practice_paper_sec">
+                <div class="uni_logo_head_div">
+                    <h4>Practice Paper </h4>
+                    <div class="next_btn_div">
+                        <a href="" class="uni_logo_all">view all</a>
+                        <i class="fa fa-chevron-left" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-chevron-right" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="uni_logos_img">
+                    <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="practice_div">
+                                    <h5>Heading1</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="practice_div">
+                                    <h5>Heading1</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="practice_div">
+                                    <h5>Heading1</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uni_logos_section practice_paper_sec">
+                <div class="uni_logo_head_div">
+                    <h4>Practice Paper </h4>
+                    <div class="next_btn_div">
+                        <a href="" class="uni_logo_all">view all</a>
+                        <i class="fa fa-chevron-left" data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-chevron-right" data-bs-target="#carouselExampleCaptions3" data-bs-slide="next"
+                            aria-hidden="true"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="uni_logos_img">
+                    <div id="carouselExampleCaptions3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="practice_div">
+                                    <h5>Heading2</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="practice_div">
+                                    <h5>Heading2</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="practice_div">
+                                    <h5>Heading2</h5>
+                                    <p>Lorem ipsum dolo fdlkfds fdf</p>
+                                    <button>Request paper</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- features section  -->
+        <div class="features_sec_main_div">
+            <div class="uni_logos_section featrues__div">
+                <div class="uni_logo_head_div">
+                    <h4>Features </h4>
+                    <div class="next_btn_div">
+                        <a href="" class="uni_logo_all featrues_all">view all</a>
+                        <div class="swiper-button-next feature_next"></div>
+                        <div class="swiper-button-prev feature_prev"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="swiper-container2 mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide feature_slider">
+                            <div class="feature_card">
+                                <h5>Heading</h5>
+                                <p>This Caption</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide feature_slider">
+                            <div class="feature_card">
+                                <h5>Heading</h5>
+                                <p>This Caption</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide feature_slider">
+                            <div class="feature_card">
+                                <h5>Heading</h5>
+                                <p>This Caption</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide feature_slider">
+                            <di class="feature_card" v>
+                                <h5>Heading</h5>
+                                <p>This Caption</p>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                            <div class="feature_card">
+                                <h5>Heading</h5>
+                                <p>This Caption</p>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="text-white text-center text-lg-start footerb">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer Content</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+                        atque ea quis molestias. Fugiat pariatur maxime quis culpa
+                        corporis vitae repudiandae aliquam voluptatem veniam, est atque
+                        cumque eum delectus sint!
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Link 1</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+        <hr">
+            <div class="text-center p-3">
+                Copyright © 2021 UniHub
+            </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <script src="./index.js"></script>
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // var widht = document.documentElement.clientWidth;
+        // var w = document.body.clientWidth;
+        // var height = window.innerHeight;
+        // console.log(widht, height, w)
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 0,
+                },
+            },
+        });
+        var swiper = new Swiper(".mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>

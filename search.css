@@ -1,0 +1,29 @@
+.search_bar_div{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.search_input{
+    background-color: white !important;
+    border: 2px solid gainsboro;
+    border-radius: 3px;
+    padding: 7px;
+    width: 450px !important;
+}
+.filter_search_btn{
+    background-color: #1d67bd;
+   outline: none;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 20px;
+   color: white;
+}
+
+/* filter section css  */
+.filter_main_div{
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-top: 2px solid gainsboro;
+    border-right: 2px solid gainsboro;
+}
