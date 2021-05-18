@@ -16,6 +16,17 @@ ul{
   padding-left: 0% !important;
 }
 
+/* navbar  */
+.c_nav{
+  background-color: black;
+}
+.C_bar{
+  /* border: 2px solid red !important; */
+  color: white !important;
+}
+.c_navlist{
+  background-color: black;
+}
  /* search box css  */
 
  .search_box_container_div{
@@ -534,10 +545,12 @@ ul{
 
 /* footer */
 .footerb {
-  background-image: url(https://hopeful-leavitt-e98e69.netlify.app/assets/images/footer-bg.jpg);
+  /* background-image: url(https://hopeful-leavitt-e98e69.netlify.app/assets/images/footer-bg.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px;
+  background-color: rgb(102, 102, 102);
+  color: black !important;
 }
 .list-unstyled>li>p{
   margin-top: 5px !important;
